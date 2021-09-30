@@ -1,0 +1,6 @@
+E:\github\InjectFix\Source\VSProj\Lib\IFix.Core.dll
+E:\github\InjectFix\Source\VSProj\Lib\IFix.Core.pdb
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.Core\IFix.Core.csproj.AssemblyReference.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.Core\IFix.Core.csproj.CoreCompileInputs.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.Core\IFix.Core.dll
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.Core\IFix.Core.pdb

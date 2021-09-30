@@ -1,0 +1,7 @@
+E:\github\InjectFix\Source\VSProj\Bin\IFix.PerfTest.exe
+E:\github\InjectFix\Source\VSProj\Bin\IFix.PerfTest.pdb
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.PerfTest\IFix.PerfTest.csproj.AssemblyReference.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.PerfTest\IFix.PerfTest.csproj.CoreCompileInputs.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.PerfTest\IFix.PerfTest.csproj.CopyComplete
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.PerfTest\IFix.PerfTest.exe
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.PerfTest\IFix.PerfTest.pdb

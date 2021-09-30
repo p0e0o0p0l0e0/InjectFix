@@ -1,0 +1,7 @@
+E:\github\InjectFix\Source\VSProj\Lib\IFix.UnitTest.dll
+E:\github\InjectFix\Source\VSProj\Lib\IFix.UnitTest.pdb
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.UnitTest\IFix.UnitTest.csproj.AssemblyReference.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.UnitTest\IFix.UnitTest.csproj.CoreCompileInputs.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.UnitTest\IFix.UnitTest.csproj.CopyComplete
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.UnitTest\IFix.UnitTest.dll
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.UnitTest\IFix.UnitTest.pdb

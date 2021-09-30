@@ -62,6 +62,8 @@ namespace IFix.Editor
         //备份文件的时间戳生成格式
         const string TIMESTAMP_FORMAT = "yyyyMMddHHmmss";
 
+        const string corePath = "../VSProj/Bin/IFix.Core.dll";
+
         //注入的目标文件夹
         private static string targetAssembliesFolder = "";
 
@@ -283,11 +285,9 @@ namespace IFix.Editor
 
             if (hasSomethingToDo)
             {
-
-                var core_path = "./Assets/Plugins/IFix.Core.dll";
                 var assembly_path = string.Format("./Library/{0}/{1}.dll", targetAssembliesFolder, assembly);
                 var patch_path = string.Format("./{0}.ill.bytes", assembly);
-                List<string> args = new List<string>() { "-inject", core_path, assembly_path,
+                List<string> args = new List<string>() { "-inject", corePath, assembly_path,
                     processCfgPath, patch_path, assembly_path };
 
                 foreach (var path in
@@ -635,7 +635,7 @@ namespace IFix.Editor
 
         //生成特定平台的patch
         public static void GenPlatformPatch(Platform platform, string patchOutputDir,
-            string corePath = "./Assets/Plugins/IFix.Core.dll")
+            string corePath = corePath)
         {
             var outputDir = "Temp/ifix";
             Directory.CreateDirectory("Temp");
@@ -663,7 +663,7 @@ namespace IFix.Editor
             foreach (var assembly in injectAssemblys)
             {
                 GenPatch(assembly, string.Format("{0}/{1}.dll", outputDir, assembly),
-                    "./Assets/Plugins/IFix.Core.dll", string.Format("{0}{1}.patch.bytes", patchOutputDir, assembly));
+                    corePath, string.Format("{0}{1}.patch.bytes", patchOutputDir, assembly));
             }
 #else
             throw new NotImplementedException();
@@ -791,7 +791,7 @@ namespace IFix.Editor
         /// <param name="patchPath">生成的patch的保存路径</param>
         public static void GenPatch(string assembly, string assemblyCSharpPath
             = "./Library/ScriptAssemblies/Assembly-CSharp.dll", 
-            string corePath = "./Assets/Plugins/IFix.Core.dll", string patchPath = "Assembly-CSharp.patch.bytes")
+            string corePath = corePath, string patchPath = "Assembly-CSharp.patch.bytes")
         {
             var patchMethods = Configure.GetTagMethods(typeof(PatchAttribute), assembly).ToList();
             var genericMethod = patchMethods.FirstOrDefault(m => hasGenericParameter(m));
@@ -805,6 +805,7 @@ namespace IFix.Editor
                 return;
             }
 
+            // 新增类和属性和方法
             var newMethods = Configure.GetTagMethods(typeof(InterpretAttribute), assembly).ToList();
             var newFields = Configure.GetTagFields(typeof(InterpretAttribute), assembly).ToList();
             var newProperties = Configure.GetTagProperties(typeof(InterpretAttribute), assembly).ToList();
@@ -858,7 +859,7 @@ namespace IFix.Editor
                 foreach (var assembly in injectAssemblys)
                 {
                     var assembly_path = string.Format("./Library/{0}/{1}.dll", GetScriptAssembliesFolder(), assembly);
-                    GenPatch(assembly, assembly_path, "./Assets/Plugins/IFix.Core.dll",
+                    GenPatch(assembly, assembly_path, corePath,
                         string.Format("{0}.patch.bytes", assembly));
                 }
             }

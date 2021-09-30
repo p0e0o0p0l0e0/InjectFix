@@ -1,0 +1,7 @@
+E:\github\InjectFix\Source\VSProj\Lib\IFix.TestDLL.Redirect.dll
+E:\github\InjectFix\Source\VSProj\Lib\IFix.TestDLL.Redirect.pdb
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.TestDLL.Redirect\IFix.TestDLL.Redirect.csproj.AssemblyReference.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.TestDLL.Redirect\IFix.TestDLL.Redirect.csproj.CoreCompileInputs.cache
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.TestDLL.Redirect\IFix.TestDLL.Redirect.csproj.CopyComplete
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.TestDLL.Redirect\IFix.TestDLL.Redirect.dll
+E:\github\InjectFix\Source\VSProj\vs2013\obj\Any CPU\Debug\IFix.TestDLL.Redirect\IFix.TestDLL.Redirect.pdb

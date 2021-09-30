@@ -1,15 +1,15 @@
 /*
  * Tencent is pleased to support the open source community by making InjectFix available.
  * Copyright (C) 2019 THL A29 Limited, a Tencent company.  All rights reserved.
- * InjectFix is licensed under the MIT License, except for the third-party components listed in the file 'LICENSE' which may be subject to their corresponding license terms. 
+ * InjectFix is licensed under the MIT License, except for the third-party components listed in the file 'LICENSE' which may be subject to their corresponding license terms.
  * This file is subject to the terms and conditions defined in file 'LICENSE', which is part of this source code package.
  */
 
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Collections;
-using System;
 
 /************************************************************************************************
     *  配置
@@ -24,7 +24,6 @@ namespace IFix
     [AttributeUsage(AttributeTargets.Class)]
     public class ConfigureAttribute : Attribute
     {
-
     }
 
     //默认执行原生代码，能切换到解析执行，必须放在标记了Configure的类里
@@ -56,7 +55,7 @@ namespace IFix
                         select type;
             var tagsMap = tags.ToDictionary(t => t, t => new List<KeyValuePair<object, int>>());
 
-            foreach(var type in types)
+            foreach (var type in types)
             {
                 foreach (var prop in type.GetProperties(BindingFlags.Static | BindingFlags.Public
                     | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
@@ -100,7 +99,7 @@ namespace IFix
                 foreach (var method in type.GetMethods(BindingFlags.Static | BindingFlags.Public
                     | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
                 {
-                    if(method.IsDefined(typeof(IFix.FilterAttribute), false))
+                    if (method.IsDefined(typeof(IFix.FilterAttribute), false))
                     {
                         filters.Add(method);
                     }
@@ -158,7 +157,6 @@ namespace IFix
                     where type.IsDefined(tagType, false)
                     select type
                     );
-
         }
     }
 }
