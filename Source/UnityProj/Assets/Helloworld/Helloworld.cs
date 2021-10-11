@@ -13,6 +13,8 @@ using UnityEngine;
 // 跑不同仔细看文档Doc/example.md
 public class Helloworld : MonoBehaviour
 {
+    IFix.Test.Calculator calc;
+
     // check and load patchs
     private void Start()
     {
@@ -32,16 +34,16 @@ public class Helloworld : MonoBehaviour
             PatchManager.Load(new MemoryStream(patch.bytes));
         }
 
+        calc = new IFix.Test.Calculator();
+
         test();
     }
 
     [IFix.Patch]
     private void test()
     {
-        var calc = new IFix.Test.Calculator();
-
         UnityEngine.Debug.Log("10 + 9 = " + calc.Add(10, 9));
 
-        UnityEngine.Debug.Log("10 - 2 = " + calc.Sub(10, 2));
+        UnityEngine.Debug.Log(StaticClass.AAAd(10, 9));
     }
 }

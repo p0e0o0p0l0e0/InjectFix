@@ -67,7 +67,7 @@ namespace IFix.Core
         //[ThreadStatic]
         //internal static ThreadStackInfo Stack = null;
 
-        static LocalDataStoreSlot localSlot = Thread.AllocateDataSlot();
+        static LocalDataStoreSlot localSlot = Thread.AllocateDataSlot(); // 在主线程上设置槽位，使该数据只能被主线程读取，其它线程无法访问
 
         internal static ThreadStackInfo Stack
         {
